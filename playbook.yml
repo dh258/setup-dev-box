@@ -1,0 +1,33 @@
+---
+- name: Setup device for development
+  hosts: all
+  become: false
+
+  tasks:
+    - name: Print the ansible user
+      ansible.builtin.debug:
+        msg: The ansible user is {{ ansible_user }}
+
+  roles:
+    - role: buluma.git
+      become: true
+      vars:
+        git_username: dhoei
+        git_user_email: darellhoei@gmail.com
+        git_user_name: Darell Hoei
+
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: "{{ ansible_user }}"
+
+    - role: geerlingguy.docker
+      become: true
+      docker_users:
+        - "{{ ansible_user }}"
+
+    - role: markosamuli.asdf
+      vars:
+        asdf_plugins:
+          - name: python
+          - name: nodejs
+          - name: golang
