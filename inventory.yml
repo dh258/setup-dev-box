@@ -2,5 +2,6 @@
 all:
   hosts:
     dev_server:
-      ansible_host: 192.168.18.173 # Change IP, or change target to local
-      ansible_user: ubuntu # Change user name
+      ansible_connection: local # Use this for your own computer
+      ansible_user: darell # Change to your username
+      # ansible_host: 192.168.18.173 # Use this if you're targeting a remote instance
