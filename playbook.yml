@@ -20,10 +20,11 @@
       users:
         - username: "{{ ansible_user }}"
 
-    - role: geerlingguy.docker
-      become: true
-      docker_users:
-        - "{{ ansible_user }}"
+    # Enable this when not using WSL2
+    # - role: geerlingguy.docker
+    #   become: true
+    #   docker_users:
+    #     - "{{ ansible_user }}"
 
     - role: markosamuli.asdf
       vars:

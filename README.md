@@ -15,6 +15,7 @@ This playbook requires certain Ansible roles to be installed. You can install th
 
 ```bash
 ansible-galaxy role install buluma.git gantsign.oh-my-zsh geerlingguy.docker markosamuli.asdf
+```
 
 ## Using Ansible Playbook
 
