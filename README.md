@@ -31,5 +31,5 @@ To use the Ansible Playbook, follow these steps:
 3. Run the playbook using the following command:
 
    ```bash
-   ansible-playbook -i inventory.yml playbook.yml
+   ansible-playbook -i inventory.yml playbook.yml --ask-become-pass
    ```
