@@ -14,7 +14,12 @@ Before you begin, ensure you have met the following requirements:
 This playbook requires certain Ansible roles to be installed. You can install these roles using the `ansible-galaxy` command. Run the following command to install the necessary roles:
 
 ```bash
-ansible-galaxy role install geerlingguy.git gantsign.oh-my-zsh geerlingguy.docker markosamuli.asdf gantsign.visual-studio-code
+ansible-galaxy role install \
+    geerlingguy.git \
+    gantsign.oh-my-zsh \
+    geerlingguy.docker \
+    markosamuli.asdf \
+    gantsign.visual-studio-code
 ```
 
 ## Using Ansible Playbook
